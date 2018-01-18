@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="name-of-project" default="full-build">
  <!-- By default, we assume all tools to be on the $PATH -->
- <property name="pdepend" value="cmd.exe /c pdepend"/>
- <property name="phpcpd"  value="cmd.exe /c phpcpd"/>
- <property name="phpcs"   value="cmd.exe /c phpcs"/>
- <property name="phpdox"  value="cmd.exe /c phpdox"/>
- <property name="phploc"  value="cmd.exe /c phploc"/>
- <property name="phpmd"   value="cmd.exe /c phpmd"/>
- <property name="phpunit" value="cmd.exe /c phpunit"/>
+ <property name="pdepend" value="cmd.exe //c pdepend"/>
+ <property name="phpcpd"  value="cmd.exe //c phpcpd"/>
+ <property name="phpcs"   value="cmd.exe //c phpcs"/>
+ <property name="phpdox"  value="cmd.exe //c phpdox"/>
+ <property name="phploc"  value="cmd.exe //c phploc"/>
+ <property name="phpmd"   value="cmd.exe //c phpmd"/>
+ <property name="phpunit" value="cmd.exe //c phpunit"/>
 
  <!-- Use this when the tools are located as PHARs in ${basedir}/build/tools 
   <property name="pdepend" value="${basedir}/build/tools/pdepend.phar"/>
