@@ -7,7 +7,7 @@
  <property name="phpdox"  value="cmd"/>
  <property name="phploc"  value="cmd"/>
  <property name="phpmd"   value="cmd"/>
- <property name="phpunit" value="cmd"/>
+ <property name="phpunit" value="phpunit"/>
 
  <!-- Use this when the tools are located as PHARs in ${basedir}/build/tools 
   <property name="pdepend" value="${basedir}/build/tools/pdepend.phar"/>
