@@ -7,7 +7,7 @@
  <property name="phpdox"  value="cmd"/>
  <property name="phploc"  value="cmd"/>
  <property name="phpmd"   value="cmd"/>
- <property name="phpunit" value="phpunit"/>
+ <property name="phpunit" value="cmd"/>
 
  <!-- Use this when the tools are located as PHARs in ${basedir}/build/tools 
   <property name="pdepend" value="${basedir}/build/tools/pdepend.phar"/>
@@ -242,13 +242,24 @@
   <property name="phpcpd.done" value="true"/>
  </target>
 
- <target name="phpunit"
+ <!--target name="phpunit"
          unless="phpunit.done"
          depends="prepare"
          description="Run unit tests with PHPUnit">
   <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
           	<arg value="/c"/>
 	<arg value="phpunit"/>
+   <arg value="--configuration"/>
+   <arg path="${basedir}/build/phpunit.xml"/>
+  </exec>
+
+  <property name="phpunit.done" value="true"/>
+ </target-->
+ <target name="phpunit"
+         unless="phpunit.done"
+         depends="prepare"
+         description="Run unit tests with PHPUnit">
+  <exec executable="${phpunit} /c phpunit" resultproperty="result.phpunit" taskname="phpunit">
    <arg value="--configuration"/>
    <arg path="${basedir}/build/phpunit.xml"/>
   </exec>
