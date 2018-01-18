@@ -249,7 +249,7 @@
   <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
           	<arg value="/c"/>
 	<arg value="phpunit"/>
-   <arg value="--configuration"/>
+   <arg value="*guion**guion*configuration"/>
    <arg path="${basedir}/build/phpunit.xml"/>
   </exec>
 
