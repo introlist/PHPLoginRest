@@ -5,13 +5,14 @@ var dccSelects = 0;
 var sccSelects = 0;
 var responseContents;
 var jsonResponse;
-const proxyurl =  window.location.origin + "/ssrwa/app/Webservice.php?ws=";
+const proxyurl =  window.location.origin + "/Repos/src/Webservice.php?ws=";
 const urlAreas = "http://catalogs.repositorionacionalcti.mx/webresources/areacono/";
 
 
 
 window.onload = function () {
     getAreas();
+alert(proxyurl);
 };
 
 $(document).ready(function () {
