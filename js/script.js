@@ -5,14 +5,13 @@ var dccSelects = 0;
 var sccSelects = 0;
 var responseContents;
 var jsonResponse;
-const proxyurl =  window.location.origin + "/Repos/src/Webservice.php?ws=";
+const proxyurl =  window.location.origin + "/PHPLoginRest/Webservice.php?ws=";
 const urlAreas = "http://catalogs.repositorionacionalcti.mx/webresources/areacono/";
 
 
 
 window.onload = function () {
     getAreas();
-alert(proxyurl);
 };
 
 $(document).ready(function () {
@@ -140,7 +139,7 @@ function fillFirstCombo(contents) {
     responseContents = contents;
     jsonResponse = JSON.parse("\{\"campos\":" + responseContents + "\}");
     console.log(contents);
-    var listItems = '<option selected="selected" value="0">- Áreas de conocimiento -</option>';
+    var listItems = '<option selected="selected" value="0" disabled>- Áreas de conocimiento -</option>';
 
     for (var i = 0; i < jsonResponse.campos.length; i++) {
         listItems += "<option value='" + jsonResponse.campos[i].idArea + "'>" + jsonResponse.campos[i].descripcion + "</option>";
@@ -154,7 +153,7 @@ function fillSecondCombo(contents) {
     responseContents = contents;
     jsonResponse = JSON.parse("\{\"campos\":" + responseContents + "\}");
     console.log(contents);
-    var listItems = '<option selected="selected" value="0">- Campos de conocimiento -</option>';
+    var listItems = '<option selected="selected" value="0" disabled>- Campos de conocimiento -</option>';
 
     for (var i = 0; i < jsonResponse.campos.length; i++) {
         listItems += "<option value='" + jsonResponse.campos[i].idCampo + "'>" + jsonResponse.campos[i].descripcion + "</option>";
@@ -170,7 +169,7 @@ function fillThirdCombo(contents) {
     jsonResponse = JSON.parse("\{\"campos\":" + responseContents + "\}");
     console.log(contents);
 
-    var listItems = '<option selected="selected" value="0">- Disciplinas de conocimiento -</option>';
+    var listItems = '<option selected="selected" value="0" disabled>- Disciplinas de conocimiento -</option>';
 
     for (var i = 0; i < jsonResponse.campos.length; i++) {
         listItems += "<option value='" + jsonResponse.campos[i].idDisciplina + "'>" + jsonResponse.campos[i].descripcion + "</option>";
@@ -186,7 +185,7 @@ function fillForthCombo(contents) {
     responseContents = contents;
     jsonResponse = JSON.parse("\{\"campos\":" + responseContents + "\}");
     console.log('Subdisciplinas\n' + contents);
-    var listItems = '<option selected="selected" value="0">- Subdisciplinas de conocimiento -</option>';
+    var listItems = '<option selected="selected" value="0" disabled>- Subdisciplinas de conocimiento -</option>';
 
     for (var i = 0; i < jsonResponse.campos.length; i++) {
         listItems += "<option value='" + jsonResponse.campos[i].idSubdisciplina + "'>" + jsonResponse.campos[i].descripcion + "</option>";
