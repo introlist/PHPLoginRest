@@ -34,7 +34,7 @@ if ( $_SESSION['loggedin'] != true){
             <ul id="nav-mobile" class="right hide-on-med-and-down" >
                 <li><a   href="http://catalogs.repositorionacionalcti.mx/">Repositorio CONACYT</a></li>
                 <li><a   href="http://www.matematicas.uady.mx/">Facultad de Matemáticas</a></li>
-                <li><a href="#"><img src= "img/user-icon.svg" height="80%" style="vertical-align: middle "> &nbsp;&nbsp;  <?php  echo ucfirst($_SESSION['username']) ?></a></li>
+                <li><a href="#"><img src= "img/user-icon.svg" style="vertical-align: middle; height: 48px;"> &nbsp;&nbsp;  <?php  echo ucfirst($_SESSION['username']) ?></a></li>
                 <li><a   href="logout.php">Cerrar Sesión</a></li>
 
             </ul>
